@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\AuthAdminController;
+use App\Http\Controllers\CourseController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +15,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// courses
+Route::get('/courses', [CourseController::class, 'index']);
+Route::get('/create', [CourseController::class, 'create']);
+Route::post('/create', [CourseController::class, 'store']);
+Route::get('/courses/:id', [CourseController::class, 'attende']);
+
+// Auth admin
+Route::get('/login', [AuthAdminController::class, 'loginview']);
+Route::post('/login', [AuthAdminController::class, 'auth']);
+
+Route::get('/logout', [AuthAdminController::class, 'logout']);
