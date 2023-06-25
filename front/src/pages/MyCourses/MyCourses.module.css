@@ -4,3 +4,6 @@
 .table th {
     @apply border-2 border-gray-200
 }
+.table td {
+    @apply border-2 border-gray-200 hover:bg-lime-500 hover:text-gray-950 p-2 transition-all delay-300 ease-linear
+}

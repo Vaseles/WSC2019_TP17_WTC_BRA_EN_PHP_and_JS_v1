@@ -5,6 +5,8 @@ import { $axios } from '../../api'
 const Courses = () => {
     const [filterData, setFilterData] = useState('')
     const [data, setData] = useState([])
+    const [successMessage, setSuccessMessage] = useState('')
+    const [error, setError] = useState('')
 
     useEffect(() => {
         document.title = 'Upcoming Courses'
@@ -24,12 +26,17 @@ const Courses = () => {
         course_id: id
       }).then(res => {
         console.log(res.data)
+        setSuccessMessage(res.data.message)
+      }).catch(err => {
+        setError(err.response.data.message)
       })
     } 
 
   return (
     <div className='page'>
       <h1>Upcoming courses</h1>
+      {successMessage? <p className='success'>{successMessage}</p> : ''}
+      {error? <p className='error'>{error}</p> : ''}
       <div className={styles.filters}>
         Filter by start date: 
         <input 

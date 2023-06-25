@@ -4,8 +4,8 @@ import styles from './MyCourses.module.css'
 
 const MyCourses = () => {
     const [data, setData] = useState([])
-    const [successMessage, setSuccessMessage] = useState('')
     const [error, setError] = useState('')
+    const [select, setSelect] = useState('')
 
     useEffect(() => {
         document.title =  'my courses'
@@ -15,11 +15,23 @@ const MyCourses = () => {
     const getData = async () => {
       await $axios.get(`/registrations?token=${localStorage.getItem('token') || ''}`).then(res => {
         setData(res.data)
-        setSuccessMessage(res.data.message)
         console.log(res.data)
     }).catch(err => {
       setError(err.response.data.message)
     })
+    }
+
+    const raiting = (e, id) => {
+      setSelect(e.target.value)
+      console.log(e.target.value)
+      $axios.put(`/registrations/${id}?token=${localStorage.getItem('token') || ''}`, {
+        course_rating: e.target.value
+      }).then(res => {
+        console.log(res.data)
+        setData(data.map(item => item.id === id? {...item,course_rating: e.target.value } : item))
+      }).catch(err => {
+        setError(err.response.data.message)
+      })
     }
 
   return (
@@ -36,15 +48,20 @@ const MyCourses = () => {
             </tr>
               {data.map(item => 
                 <tr key={item.id}>
-                  <td>{item.name}</td>
-                  <td>{item.date}</td>
-                  <td></td>
+                  <td>{item.id}</td>
+                  <td>{item.registration_date}</td>
+                  <td>{}</td>
                   <td>
-                    <select name="" id="">
+                    <select 
+                      name="" 
+                      id=""
+                      value={select}
+                      onChange={(e) => raiting(e, item.id)}
+                    >
                       <option value="" selected disabled>- rate overall experience</option>
-                      <option value="bad">bad</option>
-                      <option value="good">good</option>
-                      <option value="excellent">excellent</option>
+                      <option value="1">bad</option>
+                      <option value="2">good</option>
+                      <option value="3">excellent</option>
                     </select>
                     </td>
                 </tr>
