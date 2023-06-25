@@ -1,0 +1,9 @@
+.header {
+    @apply flex pr-10 pl-10 justify-between items-center w-full h-14 border-b-2 border-gray-50
+}
+.header:first-child {
+    @apply font-bold
+}
+.header__left {
+    @apply flex justify-center items-center gap-4
+}

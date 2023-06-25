@@ -1,0 +1,32 @@
+.home {
+    @apply flex justify-center items-center flex-col w-full p-4 
+}
+.home__auth {
+    @apply flex justify-center items-center flex-col w-full p-4 max-w-xl border-2 border-gray-50 rounded-lg;
+}
+.home__buttons {
+    @apply flex justify-between w-full mt-3
+}
+
+.courses {
+    @apply flex flex-wrap justify-start items-start  w-full
+}
+.course {
+    @apply w-full max-w-md bg-gray-800 rounded-lg m-2 p-2 text-base hover:shadow-md transition-all delay-300 ease-linear hover:shadow-lime-500 ;
+}
+
+.course h2 {
+    @apply font-bold text-xl
+}
+.course__title {
+    @apply w-full flex justify-between items-center 
+}
+.course__title span {
+    @apply text-sm text-gray-200
+}
+.course__title2 {
+    @apply w-full flex justify-start items-center text-sm text-gray-200 gap-3
+}
+.course__end {
+    @apply w-full flex justify-end mt-2 mb-2
+}

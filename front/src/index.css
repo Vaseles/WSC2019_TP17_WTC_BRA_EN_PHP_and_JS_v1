@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* main */
+* {
+  @apply box-border p-0 m-0 text-white bg-transparent;
+}
+
+body {
+  @apply bg-gray-950 text-white text-lg font-mono overflow-x-hidden;
+}
+
+/* for links */
+a { 
+  @apply text-white
+}
+
+/*  buttons */
+.btn {
+  @apply bg-white text-gray-950 hover:bg-lime-500 hover:text-gray-950 transition-all delay-300 ease-linear  rounded-lg p-1 pl-4 pr-4;
+}
+
+/* link */
+.link {
+  @apply hover:text-lime-500 transition-all delay-300 ease-linear;
+}
+::selection {
+  @apply bg-lime-500 text-gray-950
+}
+
+/* scroll */
+::-webkit-scrollbar {
+  @apply bg-transparent w-2;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-lime-500 rounded-md
+}
+
+/* page */
+.page {
+  @apply flex justify-center items-center w-full p-2 flex-col ;
+}
+/* for more buttons */
+.home__buttons {
+  @apply flex justify-between w-full mt-3
+}
+/* input field */
+input {
+  @apply bg-gray-900 outline-none rounded-lg p-2 focus:shadow-md focus:shadow-lime-500 hover:shadow-sm hover:shadow-lime-500 transition-all delay-300 ease-linear;
+}
+
+h1 {
+  @apply font-bold text-3xl;
+  text-shadow: 3px 3px 1px #84cc16;
+}

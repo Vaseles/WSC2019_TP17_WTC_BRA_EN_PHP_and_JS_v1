@@ -1,0 +1,6 @@
+.table {
+    @apply w-full border-2 border-gray-100 mt-3 mb-4
+}
+.table th {
+    @apply border-2 border-gray-200
+}
