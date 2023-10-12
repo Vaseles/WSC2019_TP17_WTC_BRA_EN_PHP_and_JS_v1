@@ -1,0 +1,74 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 80vh;
+    width: 100vh;
+    background-color: #202020;
+}
+.buttons {
+    margin: 10px 0;
+}
+.smile {
+    display: block;
+    content: '';
+    border-radius: 100%;
+    position: relative;
+    width: 400px;
+    height: 400px;
+    transition: all .3s linear;
+    border: 20px solid darkorange;
+    background-color: rgb(255, 188, 63);
+}
+
+.smile_span1 {
+    display: block;
+    content: '';
+    border-radius: 100%;
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    top: 35%; 
+    right: 20%;
+    background-color: darkorange;
+    transition: all .3s linear;
+}
+.smile_span2 {
+    display: block;
+    content: '';
+    border-radius: 100%;
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    top: 35%; 
+    left: 20%;
+    background-color: darkorange;
+    transition: all .3s linear;
+}
+.smile_span3 {
+    display: block;
+    content: '';
+    border-radius: 20px;
+    position: absolute;
+    width: 200px;
+    top: 70%;
+    left: 25%;
+    right: 25%;
+    height: 40px;
+    background-color: darkorange;
+    transition: all .3s linear;
+}
+button {
+    background-color: transparent;
+    border: 2px solid white;
+    transition: all .3s linear;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: orange;
+    color: #202020;
+    border-color: orange;
+}

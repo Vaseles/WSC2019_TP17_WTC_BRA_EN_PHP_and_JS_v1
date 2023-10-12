@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="loader">
+        <span class="loader1"></span>
+        <span class="loader2"></span>
+        <span class="loader3"></span>
+        <span class="loader4"></span>
+    </div>
+
+    <style>
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 90vh;
+}
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100px;
+    height: 100px;
+}
+.loader span {
+    display: block;
+    content: '';
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    transition: all .3s linear;
+}
+.loader1 {
+    background-color: #19A68C;
+    animation: loader_1 1.5s linear infinite;
+    top: 0;
+    left: 0;
+}
+.loader2 {
+    background-color: #F63D3A;
+    animation: loader_2 1.5s linear infinite;
+    top: 0;
+    left: 70px;
+}
+.loader3 {
+    background-color: #FDA543;
+    animation: loader_3 1.5s linear infinite;
+    top: 70px;
+    left: 70px;
+}
+.loader4 {
+    background-color: #193B48;
+    animation: loader_4 1.5s linear infinite;
+    top: 70px;
+    left: 0;
+}
+
+@keyframes loader_1 {
+    0% {
+        top: 0;
+        left: 0;
+    }
+    25% {
+        top: 0;
+        left: 70px;
+    }
+    50% {
+        top: 70px;
+        left: 70px;
+    }
+    75% {
+        top: 70px;
+        left: 0;
+    }
+    100% {
+        top: 0;
+        left: 0;
+    }
+}
+
+@keyframes loader_2 {
+    0% {
+        top: 0;
+        left: 70px;
+    }
+    25% {
+        top: 70px;
+        left: 70px;
+    }
+    50% {
+        top: 70px;
+        left: 0;
+    }
+    75% {
+        top: 0;
+        left: 0;
+    }
+    100% {
+        top: 0;
+        left: 70px;
+    }
+}
+
+@keyframes loader_3 {
+    0% {
+        top: 70px;
+        left: 70px;
+    }
+    25% {
+        top: 70px;
+        left: 0;
+    }
+    50% {
+        top: 0;
+        left: 0;
+    }
+    75% {
+        top: 0;
+        left: 70px;
+    }
+    100% {
+        top: 70px;
+        left: 70px;
+    }
+}
+
+@keyframes loader_4 {
+    0% {
+        top: 70px;
+        left: 0;
+    }
+    25% {
+        top: 0;
+        left: 0;
+    }
+    50% {
+        top: 0;
+        left: 70px;
+    }
+    75% {
+        top: 70px;
+        left: 70px;
+    }
+    100% {
+        top: 70px;
+        left: 0;
+    }
+}
+
+
+    </style>
+</body>
+</html>

@@ -1,0 +1,77 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+div {
+    position: absolute;
+    width: 400px;
+    font-size: 20px;
+}
+
+.lorem1 {
+    top: 50px;
+    left: 20px; 
+    animation: go 2s linear infinite;  
+}
+
+.lorem2 {
+    top: 450px;
+    left: 500px;   
+    animation: go1 2s linear infinite;  
+}
+
+
+@keyframes go {
+    0% {
+        margin-top: 0;
+        margin-left: 0;
+    }
+    25% {
+        margin-top: 10px;
+        margin-left: 5px;
+    }
+    50% {
+        margin-top: 0;
+        margin-left: 0;
+    }
+    75% {
+        margin-top: -10px;
+        margin-left: -5px;
+    }
+    100% {
+        margin-top: 0;
+        margin-left: 0;
+    }
+}
+
+@keyframes go1 {
+    0% {
+        margin-top: 0;
+        margin-left: 0;
+    }
+    25% {
+        margin-top: 10px;
+        margin-right: 10px;
+    }
+    50% {
+        margin-top: 0;
+        margin-left: 0;
+    }
+    75% {
+        margin-top: -10px;
+        margin-right: -10px;
+    }
+    100% {
+        margin-top: 0;
+        margin-left: 0;
+    }
+}
+
+

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="toggle">
+        <input type="checkbox">
+        <span></span>
+    </div>
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 100vh;
+            height: 90vh;
+        }
+        .toggle {
+            width: 100px;
+            height: 50px;
+            border-radius: 40px;
+            position: relative;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all .3s linear;
+            flex-direction: column;
+        }
+        .toggle input {
+            width: 20px;
+            height: 20px;
+            appearance: none;
+            position: absolute;
+            background-color: aqua;
+            border-radius: 40px;
+            left: 10px;
+            transition: all .3s linear;
+            z-index: 2;
+            cursor: pointer;
+        }
+        .toggle span {
+            width: 100px;
+            height: 50px;
+            background-color: darkblue;
+            position: absolute;
+            transition: all .3s linear;
+            border-radius: 40px;
+        }
+
+        .toggle input:checked {
+            background-color: darkblue;
+            left: 60px;
+            transition: all.3s linear;
+            animation: toggle_input 1s linear;
+        }
+        .toggle input:checked + span {
+            background-color: aqua;
+            transition: all .3s linear;
+            animation: change_color 1s linear;
+        }
+       
+        
+        @keyframes toggle_input {
+            0% {
+                width: 20px;
+                height: 20px;
+                left: 0px;
+                background-color: aqua;
+            }
+            90% {
+                left: 0;
+                background-color: aqua;
+                opacity: 1;
+                width: 100px;
+                height: 50px;
+            }
+            99% {
+                opacity: 0;
+            }
+            100% {
+                left: 60px;
+                width: 20px;
+                height: 20px;
+                background-color: darkblue;
+            }
+        }
+        @keyframes change_color {
+            0% {
+                background-color: darkblue;
+            }
+            90% {
+                background-color: darkblue;
+            }
+            100% {
+                background-color: aqua;
+            }
+        }
+    </style>
+</body>
+</html>

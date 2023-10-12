@@ -1,0 +1,25 @@
+@tailwind base; /* include tailwind */
+@tailwind components; /* include tailwind */
+@tailwind utilities; /* include tailwind */
+
+/* for everything */
+* {
+    @apply box-border p-0 m-0 outline-none text-white bg-transparent text-lg;
+}
+/* for body */
+body {
+    @apply bg-neutral-900 text-white text-lg overflow-x-hidden 
+}
+/* when u selected some word */
+::selection {
+    @apply bg-indigo-500 text-white;
+}
+
+/* static components */
+button {
+    @apply p-2 bg-neutral-900 border-2 border-white hover:border-indigo-500 hover:bg-indigo-500 transition-all delay-300 ease-linear rounded-md text-sm;
+}
+
+input {
+    @apply mb-2 border-b-2 border-b-white hover:border-b-indigo-500 transition-all delay-300 ease-linear w-full p-2;
+}

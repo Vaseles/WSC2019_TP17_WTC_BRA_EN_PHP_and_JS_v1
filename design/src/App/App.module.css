@@ -1,0 +1,103 @@
+.app {
+    
+}
+/* presentation mode */
+.presentation__mode {
+    @apply p-2 fixed top-4 right-4; 
+}
+.clear {
+    @apply left-10 w-20 right-auto
+}
+
+/* circles */
+.app__circles {
+    @apply w-screen h-screen flex justify-center items-center flex-col ;
+}
+
+/* circle */
+.app_circle {
+    @apply bg-neutral-900 relative border-white border-2 flex justify-center items-center flex-col;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}
+
+.app__circle__item {
+    @apply bg-neutral-900 relative opacity-0  border-white border-2 flex justify-center items-center flex-col hover:opacity-100 cursor-pointer;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    transition: all .3s linear;
+}
+
+/* for everything */
+.app_circle span {
+    @apply border-2 absolute z-10 bg-neutral-900 border-white flex justify-center items-center flex-col hover:bg-indigo-200 hover:text-neutral-900;
+    transition: all .3s linear;
+}
+
+/*  first circle */
+.app_circle__one  {
+    width: 90px;
+    top: -3px;
+    height: 40px;
+    z-index: 1;
+    border-radius: 100px 100px 0 0;
+}
+
+/*  second circle */
+.app_circle__two  {
+    left: -5px;
+    width: 40px;
+    height: 80px;
+    z-index: 2;
+    border-radius: 100px 0 0 100px;
+}
+
+/*  third circle */
+.app_circle__three  {
+    bottom: -5px;
+    height: 40px;
+    width: 100px;
+    z-index: 3;
+    border-radius: 0 0 100px 100px;
+}
+
+/*  four */
+.app_circle__four  {
+    right: -5px;
+    height: 80px;
+    width: 40px;
+    z-index: 4;
+    border-radius: 0 100px 100px 0;
+}
+
+/* settings */
+.settings {
+    @apply flex justify-center items-start flex-col w-full fixed z-20 bg-neutral-900 rounded-lg shadow-lg shadow-neutral-700 p-10;
+    max-width: 600px;
+    top: 20%;
+    left: 20%;
+}
+
+/* edit and delete */
+.app__circle__item__delete {
+    @apply absolute;
+    left: -30px;
+
+}
+.app__circle__item__edit {
+    @apply absolute;
+    right: -30px;
+}
+.presentation {
+    @apply flex justify-center items-center flex-col w-screen h-screen bg-neutral-900 z-40 fixed
+}
+.presentation form {
+    @apply flex justify-center items-center flex-col p-2 bg-neutral-800 w-full h-full rounded-lg relative;
+    width: 500px;
+    height: 300px;
+    left: 25%;
+    top: 25%;
+    right: 25%;
+}
